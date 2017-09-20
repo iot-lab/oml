@@ -1,4 +1,8 @@
 language: c
+before_install:
+  - sudo apt-get install autoconf automake libtool gnulib
 script:
-- ./autogen.sh && ./configure && make && make check
-- sudo make install
+- ./autogen.sh 
+- ./configure
+- make CFLAGS="-Wall -Werror" 
+- make distcheck
