@@ -4,5 +4,5 @@ before_install:
 script:
 - ./autogen.sh 
 - ./configure
-- make CFLAGS="-Wall -Werror" 
+- CFLAGS="-Wall -Werror" 
 - make distcheck
