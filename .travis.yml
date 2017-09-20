@@ -1,7 +1,8 @@
 language: c
 before_install:
   - sudo apt-get install libxml2-dev libpopt-dev libsqlite3-dev pkg-config libxml2-utils
-  - sudo apt-get install autoconf automake libtool gnulib
+  - sudo apt-get autoconf automake libtool gnulib
+  - sudo apt-get asciidoc texinfo docbook-xml docbook-xsl xsltproc # for building documentation
 script:
 - ./autogen.sh 
 - ./configure
